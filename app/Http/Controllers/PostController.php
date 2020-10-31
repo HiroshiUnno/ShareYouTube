@@ -41,7 +41,7 @@ class PostController extends Controller
     public function index(Request $request)
     {
       $cond_title = $request->cond_title;
-      $articles = User::all();
+      //$articles = User::all();
 
         if ($cond_title != '') {
             $articles = Post::where('title', $cond_title)->orderBy('updated_at', 'desc')->get();
